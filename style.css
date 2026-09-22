@@ -43,6 +43,9 @@ body{
     gap:10px;
     align-items: center;
 }
+.navbar__s4{
+    display:none;
+}
 .categories{
     display: flex;
     padding:10px;
@@ -67,9 +70,9 @@ body{
 .sale-text{
     position: absolute;
     border: solid black 3px;
-    padding: 10px;
+    padding: 2%;
     background-color: white;
-    top:40%;
+    top:10%;
     width: 35%;
     left: 10%;
     animation-name: scales;
@@ -77,6 +80,9 @@ body{
     opacity: 0;
     animation-fill-mode: forwards;
 }   
+.sale-image{
+    position: relative;
+}
 @keyframes scales{
     0%{
         transform: scale(0);
@@ -98,8 +104,9 @@ body{
 
 }
 .course-card{
-    width:320px;
-    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 .course-card img{
     width:100%;
@@ -146,4 +153,27 @@ body{
     justify-content: space-between;
     margin: 20px;
     align-items: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px){
+    body{
+        font-size: 10px;
+    }
+        
+
+}
+@media screen and (max-width: 600px){
+    .course-card{
+        flex-basis: 40%;
+    }
+    .categories{
+        display:none;
+    }
+    .navbar__s2,.navbar__s3{
+        display:none;
+    }
+    .navbar__s4{
+        display:block;
+    }
 }
